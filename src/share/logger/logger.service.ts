@@ -52,7 +52,7 @@ export class LoggerFactory {
     logger: bunyan
     public init(event?: APIGatewayProxyEvent) {
         logger = createBunyanLogger({
-            name: 'AMIMOTO API',
+            name: 'Serverless Nestjs API',
             ...createLoggingContextFromEvent(event)
         })
         return this
