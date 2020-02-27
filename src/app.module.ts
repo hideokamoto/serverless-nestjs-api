@@ -1,6 +1,7 @@
 import { Module } from '@nestjs/common';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
+import { LoggerModule } from './share/logger/logger.module';
 
 @Module({
   controllers: [
@@ -9,5 +10,6 @@ import { AppService } from './app.service';
   providers: [
     AppService,
   ],
+  imports: [LoggerModule],
 })
 export class AppModule {}
