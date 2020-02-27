@@ -12,9 +12,7 @@ async function bootstrap() {
   const logger = new Logger();
   app.useLogger(logger);
 
-  if (process.env.STAGE === 'development') {
-    launchSwagger(app);
-  }
+  launchSwagger(app);
   app.init();
   await app.listen(port);
 }
