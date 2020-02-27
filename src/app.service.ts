@@ -4,11 +4,12 @@ import { LoggerService } from './share/logger/logger.service';
 @Injectable()
 export class AppService {
   constructor(private readonly log: LoggerService) {}
-  getHello(): string {
+  getHello(username?: string): string {
     this.log.warn({
+      username,
       test: true,
       number: 1,
     });
-    return 'Hello World!';
+    return `Hello World! ${username}`;
   }
 }
