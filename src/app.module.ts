@@ -4,12 +4,8 @@ import { AppService } from './app.service';
 import { LoggerModule } from './share/logger/logger.module';
 
 @Module({
-  controllers: [
-    AppController,
-  ],
-  providers: [
-    AppService,
-  ],
+  controllers: [AppController],
+  providers: [AppService],
   imports: [LoggerModule],
 })
 export class AppModule {}

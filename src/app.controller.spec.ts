@@ -10,7 +10,7 @@ describe('AppController', () => {
     const app: TestingModule = await Test.createTestingModule({
       controllers: [AppController],
       providers: [AppService],
-      imports: [LoggerModule]
+      imports: [LoggerModule],
     }).compile();
 
     appController = app.get<AppController>(AppController);

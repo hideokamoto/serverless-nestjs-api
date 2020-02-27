@@ -9,13 +9,13 @@ async function bootstrap() {
   const port = Number(process.env.PORT) || 3000;
   app.useGlobalPipes(new ValidationPipe({ transform: true }));
 
- const logger = new Logger()
-  app.useLogger(logger)
+  const logger = new Logger();
+  app.useLogger(logger);
 
   if (process.env.STAGE === 'development') {
     launchSwagger(app);
   }
-  app.init()
+  app.init();
   await app.listen(port);
 }
 bootstrap();
